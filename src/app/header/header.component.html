@@ -127,9 +127,9 @@
                     <div class="login-m_page">
                         <h3 class="sign">Sign In</h3>
                         <div class="login-form-wthree-agile">
-                            <form action="#" method="post">
-                                <input type="email" name="email" placeholder="E-mail" required="">
-                                <input type="password" name="password" placeholder="Password" required="">
+                            <form (ngSubmit)="signin()">
+                                <input type="email" name="email" [(ngModel)]="user.mail" placeholder="E-mail" required="">
+                                <input type="password" name="password" [(ngModel)]="user.pwd" placeholder="Password" required="">
                                 <div class="tp">
                                     <input type="submit" value="Sign In">
                                 </div>
@@ -169,11 +169,12 @@
                     <div class="login-m_page">
                         <h3 class="sign">Sign Up</h3>
                         <div class="login-form-wthree-agile">
-                            <form (ngSubmit)="addUser" method="post">
+                            <form (ngSubmit)="addUser()">
                                 <input type="text" name="nom" [(ngModel)]="infoUser.nom" placeholder="Nom" id="nom" required>
                                 <input type="text" name="prenom" [(ngModel)]="infoUser.prenom"  placeholder="Prenom">
                                 <input type="email" name="mail" [(ngModel)]="user.mail" placeholder="Adresse mail" required>
                                 <input type="password" name="password" [(ngModel)]="user.pwd" placeholder="Mot de passe" required>
+                                <!--<button type="submit" >Enregistrer</button>-->
                                 <input type="submit" value="Enregistrer">
                             </form>
                         </div>
