@@ -26,7 +26,7 @@ export class HeaderComponent implements OnInit {
   addUser(): void{
     
     this.authentificationService.addUser(this.user)
-        .subscribe(() => console.log("connecté"));
+        .subscribe((res) => console.log(res));
   }
 
   signin(): void{
